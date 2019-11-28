@@ -52,7 +52,7 @@ def train():
     model.add(Dense(20,activation='relu'))
     model.add(Dense(2,activation='softmax'))
     # use adam optimizer
-    op = keras.optimizers.Adam(lr=0.01)
+    op = keras.optimizers.SGD(lr=0.01)
     model.compile(loss='categorical_crossentropy',optimizer=op,metrics=['accuracy'])
     # print the model structure
     model.summary()
